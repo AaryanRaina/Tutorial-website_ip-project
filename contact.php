@@ -13,51 +13,9 @@
 
 </head>
 <body class="body">
-<header class="mainheader">
-	<img src="images/logo.png">
-	<content id="search">
-		<form>
-  <input type="text" name="search" placeholder="Search anything..." onclick="window.location.href='search.php'">
-</form>
-	</content>
-  <nav>
-		<!--<ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="course.php">Course</a></li>
-			<li><a href="referencebook.php">Reference Books</a></li>
-			<li><a href="notes.php">Notes</a></li>
-			<li><a href="contact.php">Contact</a></li>
-			<li><a href="login.php">Login</a></li>	
-		</ul>-->
-		<div class="topnav" id="myTopnav">
-			<a href="index.php" class="active">Home</a>
-			<div class="dropdown">
-				<button class="dropbtn">About Us 
-				  <i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-				  <a href="privacy policy.php">Privacy Policy</a>
-				  <a href="Terms&condition.php">Terms and Conditions</a>
-				</div>
-			  </div> 
-			  <div class="dropdown">
-				<button class="dropbtn">Study Material 
-				  <i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-				  <a href="notes.php">Notes</a>
-				  <a href="referencebook.php">Reference Books</a>
-				  <a href="Qpaper.php">Sample Ques. Papers</a>
-				</div>
-			  </div> 
-			<a href="course.php">Courses</a>
-			<a href="contact.php">Contact</a>
-			<a href="Gallery.php">Gallery</a>
-			<a href="login.php">Login</a>
-			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-		  </div>
-		</nav><br>
-</header>
+    <?php
+		require_once('nav.php');
+	?>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.8193304645465!2d74.82975398383248!3d32.770528152439965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e842b8cf477b1%3A0x25e1e23be1347184!2sRoopnagar%20Enclave%20Lane%202%2C%20Jammu%20180013!5e0!3m2!1sen!2sin!4v1606282731280!5m2!1sen!2sin" width="300" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 <h3>Contact Us</h3>
 <h4>Venjan Tutorials<br>

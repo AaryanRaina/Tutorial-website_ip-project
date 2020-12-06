@@ -12,51 +12,9 @@
 
 </head>
 <body class="body">
-<header class="mainheader">
-	<img src="images/logo.png">
-	<content id="search">
-		<form>
-  <input type="text" name="search" placeholder="Search anything..." onclick="window.location.href='search.php'">
-</form>
-	</content>
-	<nav>
-		<!--<ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="course.php">Course</a></li>
-			<li><a href="referencebook.php">Reference Books</a></li>
-			<li><a href="notes.php">Notes</a></li>
-			<li><a href="contact.php">Contact</a></li>
-			<li><a href="login.php">Login</a></li>	
-		</ul>-->
-		<div class="topnav" id="myTopnav">
-			<a href="index.php" class="active">Home</a>
-			<div class="dropdown">
-				<button class="dropbtn">About Us 
-				  <i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-				  <a href="privacy policy.php">Privacy Policy</a>
-				  <a href="Terms&condition.php">Terms and Conditions</a>
-				</div>
-			  </div> 
-			  <div class="dropdown">
-				<button class="dropbtn">Study Material 
-				  <i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-				  <a href="notes.php">Notes</a>
-				  <a href="referencebook.php">Reference Books</a>
-				  <a href="Qpaper.php">Sample Ques. Papers</a>
-				</div>
-			  </div> 
-			<a href="course.php">Courses</a>
-			<a href="contact.php">Contact</a>
-			<a href="Gallery.php">Gallery</a>
-			<a href="login.php">Login</a>
-			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-		  </div>
-		</nav><br>
-</header>
+    <?php
+		require_once('nav.php');
+	?>
 <h1>9th State Board Class</h1>
 <div class="gallery">
   <a  href= "payment_paytm.php">
