@@ -19,7 +19,7 @@ $user_n = $row['username'];
 <!DOCTYPE html> 
 <html lang="en">
 <head>
-	<title>Student's Profile</title>
+	<title>Teacher's Profile</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="Venjan Tutorials, Jammu">
@@ -40,50 +40,31 @@ $user_n = $row['username'];
   <caption><?php echo $user_n ?></caption>
   <thead>
     <tr>
-      <th scope="col">Class</th>
-      <th scope="col">School</th>
-	  <th scope="col">Email-id</th>
+      <th scope="col">Assigned Class</th>
+      <th scope="col">Email-id</th>
+	  <th scope="col">Phone Number</th>
 
     </tr>
   </thead>
   <tbody>
     <tr>
       <td data-label="Class">10th</td>
-      <td data-label="School">DAV Public School</td>
-      <td data-label="Email-id"><?php echo $user_e ?></td>
+      <td data-label="Email-id"><?php echo $user_e ?></td>  
+	  <td data-label="School">DAV Public School</td>
+
 	  
  </tr>
   </tbody>
 </table>
 <br>
 
-<input  class="pbtn" type="button" style="width:150px;" value="Subject Notes">
+<input  class="pbtn" type="button" style="width:200px;" value="Add Subject Notes">
                                                       
-<a href="videos.php"><input class="pbtn" type="button" style="width:150px;" value="Subject Videos"></a>
+<a href="videos.php"><input class="pbtn" type="button" style="width:200px;" value="Add Subject Videos"></a>
 
 <br>
 <br>
-<div class="gallery">
-  <a href="videos.php">
-    <img src="images/MATHEMATICS.png" alt="CCT101" width="300" height="200">
-  </a>
-  <div class="desc">Mathematics 
-</div>
-</div>
 
-<div class="gallery">
-  <a href="#">
-    <img src="images/3638977.jpg" alt="Html" width="300" height="200">
-  </a>
-  <div class="desc"> Science </div>
-</div>
-
-<div class="gallery">
-  <a href="#">
-    <img src="images/english.png" alt="Database" width="300" height="200">
-  </a>
-  <div class="desc">English</div>
-</div>
 
 <script>
 	function myFunction() {
@@ -125,7 +106,7 @@ $user_n = $row['username'];
 		</footer>
 </footer>
 <script type="text/javascript">
-	document.title="Student's Profile";
+	document.title="Teacher's Profile";
 </script>
 </body>
 </html>
