@@ -39,6 +39,13 @@
 				
 				var address = 
 					document.forms["RegForm"]["Address"]; 
+					
+				var hello = 
+					document.forms["RegForm"]["hello"]; 
+
+				var hello2  = 
+					document.forms["RegForm"]["hello2"]; 
+					
 
 				if (name.value == "") { 
 					window.alert("Please enter your name."); 
@@ -77,7 +84,18 @@
 					phone.focus(); 
 					return false; 
 				} 
+				
+				if (hello.value == "") { 
+					window.alert("Please enter your Class"); 
+					hello.focus(); 
+					return false; 
+				} 				
 
+				if (hello2.value == "") { 
+					window.alert("Please enter your School's name"); 
+					hello2.focus(); 
+					return false; 
+				} 
 
 				if (password.value != cpassword.value) { 
 				   alert("Your password and confirmation password do not match. Try again!");
@@ -119,11 +137,11 @@
 						
 			<br /> 
 			<p>Class: <input type="text"
-						size="65" name="Class" /></p> 
+						size="65" name="hello"  /></p> 
 						
 			<br /> 
 			<p>School: <input type="text"
-						size="65" name="School" /></p> 
+						size="65" name="hello2" /></p> 
 			
 			<br>
 			
