@@ -116,6 +116,14 @@
 			<br /> 
 			<p>Phone No: <input type="text"
 						size="65" name="Telephone" /></p> 
+						
+			<br /> 
+			<p>Class: <input type="text"
+						size="65" name="Class" /></p> 
+						
+			<br /> 
+			<p>School: <input type="text"
+						size="65" name="School" /></p> 
 			
 			<br>
 			
