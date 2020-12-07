@@ -50,7 +50,7 @@ if($isValidChecksum == "TRUE") {
                     <i class="fas fa-check-circle" style="font-size: 78px;color:#4bc14e;"></i>
                       <h1>Thank You for your purchase!</h1>
                       <small style="padding:10px;background:#ddd;color:#7f7f7f;border-radius:5px;">Transation# '.$_POST["TXNID"].'</small>
-                      <a href="Notesafterpaid.php" class="btn btn-success"><i class="fas fa-arrow-circle-left" ></i>Back</a> 
+                      <a href="logout_process.php" class="btn btn-success"><i class="fas fa-arrow-circle-left" ></i>Back</a> 
                     </div>';
                     if (isset($_POST) && count($_POST)>0 )
                     { 
@@ -92,6 +92,10 @@ if($isValidChecksum == "TRUE") {
                           
                           $conn->close();
                      }
+                     session_start();
+                     $_SESSION["n"]="yes";
+                     $y=$_SESSION["y"];
+                     $z=$_SESSION["z"];
 
 
 ?>

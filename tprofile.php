@@ -14,6 +14,8 @@ $result=mysqli_query($con,"SELECT * from register where email in (select email f
 $row=mysqli_fetch_array($result);
 $user_e = $row['email'];
 $user_n = $row['username'];
+$user_c = $row['class'];
+$user_p = $row['phoneno'];
 //echo $user_e;
 ?>
 <!DOCTYPE html> 
@@ -48,9 +50,9 @@ $user_n = $row['username'];
   </thead>
   <tbody>
     <tr>
-      <td data-label="Class">10th</td>
+      <td data-label="Class"><?php echo $user_c ?></td>
       <td data-label="Email-id"><?php echo $user_e ?></td>  
-	  <td data-label="School">DAV Public School</td>
+	  <td data-label="Phone No."><?php echo $user_p ?></td>
 
 	  
  </tr>
@@ -58,7 +60,7 @@ $user_n = $row['username'];
 </table>
 <br>
 
-<input  class="pbtn" type="button" style="width:200px;" value="Add Subject Notes">
+<a href="addnotes.php"><input  class="pbtn" type="button" style="width:200px;" value="Add Subject Notes"></a>
                                                       
 <a href="videos.php"><input class="pbtn" type="button" style="width:200px;" value="Add Subject Videos"></a>
 

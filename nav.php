@@ -2,6 +2,9 @@
 session_start();
 $z=$_SESSION["z"];
 $y=$_SESSION["y"];
+$n=$_SESSION["n"];
+$ut=$_SESSION["ut"];
+$c=$_SESSION["c"];
 //echo  $_SESSION["z"] ;
 ?>
 <header class="mainheader">
@@ -21,7 +24,7 @@ $y=$_SESSION["y"];
 			<li><a href="login.php">Login</a></li>	
 		</ul>-->
 			<div class="topnav" id="myTopnav">
-				<a href="#home" class="active">Home</a>
+				<a href="index.php" class="active">Home</a>
 				<div class="dropdown">
 					<button class="dropbtn">About Us
 						<i class="fa fa-caret-down"></i>
@@ -36,7 +39,28 @@ $y=$_SESSION["y"];
 						<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-content">
-						<a href="notes.php">Notes</a>
+						<?php
+						if ($n=="yes"){
+							//$login = logout_process.php;
+							if ($ut=="2"){
+							echo '<a href="Notesafterpaidt.php">Notes(paid)T</a>';
+							}
+							else if($ut=="1"){
+								if($c=="9"){
+									echo '<a href="Notesafterpaid9.php">Notes(paid)9</a>';
+								}
+								else if($c=="10"){
+									echo '<a href="Notesafterpaid10.php">Notes(paid)10</a>';
+								}
+								else{
+									echo '<a href="notes.php">Notes</a>';
+								}
+							}
+						}
+						else{
+							echo '<a href="notes.php">Notes</a>';
+						}
+						?>
 						<a href="referencebook.php">Reference Books</a>
 						<a href="Qpaper.php">Sample Ques. Papers</a>
 					</div>
@@ -56,7 +80,7 @@ $y=$_SESSION["y"];
 				<?php
 				if ($y=="2"){
 					//$login = logout_process.php;
-					echo '<a href="profile.php">Teacher</a>';
+					echo '<a href="tprofile.php">Teacher</a>';
 				}
 				else if ($y=="1"){
 					echo '<a href="profile.php">Student</a>';

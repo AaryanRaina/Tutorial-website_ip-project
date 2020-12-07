@@ -22,7 +22,7 @@
 	<footer>
 		<p class="post-info">Lecture 1 : Trignometry</p>
 		<div class="container_You">
-			<iframe class="responsive-iframe" src="https://www.youtube.com/embed/Q00SzWIJT1Y?controls=0"></iframe>
+			<iframe allowFullScreen='allowFullScreen' class="responsive-iframe" src="https://www.youtube.com/embed/Q00SzWIJT1Y?controls=0"></iframe>
 		  </div>
 	</footer>
 	<content>

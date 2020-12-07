@@ -10,6 +10,9 @@ session_destroy();
 session_start();
 $_SESSION["z"] = "failure";
 $_SESSION["y"] = "0";
+$_SESSION["n"] = "no";
+$_SESSION["ut"]="";
+$_SESSION["c"]="";
 
 $con = mysqli_connect('localhost','root');
 

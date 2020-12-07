@@ -33,6 +33,8 @@ if ($row = mysqli_fetch_assoc($select_user_details)) {
     $user_id = $row['id'];
     $user_email = $row['email'];
     $user_type = $row['user_type'];
+    $user_notes = $row['payement'];
+    $user_class = $row['class'];
 
     echo $user_password . " " . $user_id . " " . $user_email . " " .$user_type;
 } else {
@@ -45,16 +47,28 @@ if ($user_email && $user_password) {
     if ($password == $user_password) {
         $_SESSION['id'] = $user_id;
         if ($user_type==2) {
-            header("Location: index.php?q=success");
+            header("Location: tprofile.php?q=success");
             $z=success;
             $_SESSION["z"]=$z;
             $_SESSION["y"]="2";
+            $_SESSION["n"]="yes";
+            $_SESSION["ut"]=$user_type;
+            $_SESSION["c"]=$user_class;
+
         }
         else if ($user_type==1) {
             header("Location: profile.php?q=success");
             $z=success;
             $_SESSION["z"]=$z;
             $_SESSION["y"]="1";
+            $_SESSION["c"]=$user_class;
+            $_SESSION["ut"]=$user_type;
+            if($user_notes=="yes"){
+                $_SESSION["n"]="yes";  
+            }
+            else{
+                $_SESSION["n"]="no"; 
+            }
         }
 
         //header("Location: Success.php?q=success");

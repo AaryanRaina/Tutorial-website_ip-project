@@ -20,6 +20,8 @@ if (isset($_POST['Submit'])) {
     $password = test_input($_POST['Password']);
     $telephone = test_input($_POST['Telephone']);
     $queries = test_input($_POST['Comment']);
+    $class = test_input($_POST['hello']);
+    $school = test_input($_POST['hello2']);
 
 
 
@@ -47,7 +49,7 @@ if (isset($_POST['Submit'])) {
 
     if (mysqli_num_rows($result) == 0) {
 
-        $query = "insert into register (username,address,email,password,phoneno,queries)VALUES('$name','$address','$email','$password',$telephone,'$queries')";
+        $query = "insert into register (username,user_type,address,email,password,phoneno,class,school,queries)VALUES('$name',1,'$address','$email','$password',$telephone,'$class','$school','$queries')";
         echo $query;
 
         $add_user_result = mysqli_query($connection, $query);

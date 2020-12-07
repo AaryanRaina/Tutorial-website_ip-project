@@ -16,9 +16,6 @@
 <?php
 		require_once('nav.php');
 	?>
-
-
-
 <html> 
 	<head> 
 		<script> 
@@ -53,7 +50,7 @@
 	<body> 
 	<div id="formstyle">
 		<h1 style="text-align: center;">Fill this form to update the subject notes</h1> 
-		<form id="rform" name="RegForm" action="register_process.php"
+		<form id="rform" name="RegForm" action="addnotes_process.php"
 			onsubmit="return register()" method="post"> 
 			
 			<p>Class: <select name="class" required>

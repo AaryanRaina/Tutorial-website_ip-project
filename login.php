@@ -35,7 +35,7 @@ $user_e = $row['email'];
 	<?php
 		require_once('nav.php');
 	?>
-	<a href="profile.php" style="font-family:'Courier New';font-size:20px;" ><?php echo $user_e ?></a>
+	<!--<a href="profile.php" style="font-family:'Courier New';font-size:20px;" >//echo $user_e </a>-->
 	<div class="container">
 		<div class="main">
 
