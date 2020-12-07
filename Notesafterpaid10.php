@@ -14,6 +14,20 @@ $result=mysqli_query($con,"select * from login");
 $row=mysqli_fetch_array($result);
 $user_e = $row['email'];
 //echo $user_e;
+
+$result1=mysqli_query($con,"select link from notes where subject = 'maths' and class = '10'");
+$row_maths=mysqli_fetch_array($result1);
+$maths_link=$row_maths['link'];
+//echo "$maths_link";
+
+$result2=mysqli_query($con,"select link from notes where subject = 'english' and class = '10'");
+$row_english=mysqli_fetch_array($result2);
+$english_link=$row_english['link'];
+//echo "$english_link";
+
+$result3=mysqli_query($con,"select link from notes where subject = 'science' and class = '10'");
+$row_science=mysqli_fetch_array($result3);
+$science_link=$row_science['link'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,23 +58,29 @@ $user_e = $row['email'];
 
 <h1 style="text-align:center;">10th Class</h1>
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+  <?php
+  echo '<a target="_blank" href="'.$english_link.'">
     <img src="images/english.png" alt="CCT101" width="370" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">English</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+<?php
+  echo '<a target="_blank" href="'.$science_link.'">
     <img src="images/3638977.jpg" alt="Html" width="300" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+<?php
+  echo '<a target="_blank" href="'.$maths_link.'">
     <img src="images/MATHEMATICS.PNG" alt="Database" width="300" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">Maths</div>
 </div>
 

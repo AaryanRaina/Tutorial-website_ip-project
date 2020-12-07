@@ -14,6 +14,35 @@ $result=mysqli_query($con,"select * from login");
 $row=mysqli_fetch_array($result);
 $user_e = $row['email'];
 //echo $user_e;
+
+$result91=mysqli_query($con,"select link from notes where subject = 'maths' and class = '9'");
+$row_maths9=mysqli_fetch_array($result91);
+$maths_link9=$row_maths9['link'];
+//echo "$maths_link";
+
+$result92=mysqli_query($con,"select link from notes where subject = 'english' and class = '9'");
+$row_english9=mysqli_fetch_array($result92);
+$english_link9=$row_english9['link'];
+//echo "$english_link";
+
+$result93=mysqli_query($con,"select link from notes where subject = 'science' and class = '9'");
+$row_science9=mysqli_fetch_array($result93);
+$science_link9=$row_science9['link'];
+
+
+$result101=mysqli_query($con,"select link from notes where subject = 'maths' and class = '10'");
+$row_maths10=mysqli_fetch_array($result101);
+$maths_link10=$row_maths10['link'];
+//echo "$maths_link";
+
+$result102=mysqli_query($con,"select link from notes where subject = 'english' and class = '10'");
+$row_english10=mysqli_fetch_array($result102);
+$english_link10=$row_english10['link'];
+//echo "$english_link";
+
+$result103=mysqli_query($con,"select link from notes where subject = 'science' and class = '10'");
+$row_science10=mysqli_fetch_array($result103);
+$science_link10=$row_science10['link'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,23 +80,29 @@ $user_e = $row['email'];
 <div class="nt9">
 <h1 style="text-align:center;">9th Class</h1>
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+  <?php
+  echo '<a target="_blank" href="'.$english_link9.'">
     <img src="images/english.png" alt="CCT101" width="370" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">English</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+<?php
+  echo '<a target="_blank" href="'.$science_link9.'">
     <img src="images/3638977.jpg" alt="Html" width="300" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+<?php
+  echo '<a target="_blank" href="'.$maths_link9.'">
     <img src="images/MATHEMATICS.PNG" alt="Database" width="300" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">Maths</div>
 </div>
 
@@ -82,23 +117,29 @@ $user_e = $row['email'];
 <div class="nt10">
 <h1 style="text-align:center;">10th Class</h1>
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+  <?php
+  echo '<a target="_blank" href="'.$english_link10.'">
     <img src="images/english.png" alt="CCT101" width="370" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">English</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+<?php
+  echo '<a target="_blank" href="'.$science_link10.'">
     <img src="images/3638977.jpg" alt="Html" width="300" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://docs.google.com/document/d/1D_QCM0HDpnXWtIPvRtGTwq13N-yZtLxBH2gHXji5QEQ/edit?usp=sharing">
+<?php
+  echo '<a target="_blank" href="'.$maths_link10.'">
     <img src="images/MATHEMATICS.PNG" alt="Database" width="300" height="200">
-  </a>
+  </a>'
+  ?>
   <div class="desc">Maths</div>
 </div>
 </div>
