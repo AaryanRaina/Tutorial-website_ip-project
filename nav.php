@@ -56,6 +56,9 @@ $c=$_SESSION["c"];
 									echo '<a href="notes.php">Notes</a>';
 								}
 							}
+							else if($ut=="3"){
+								echo '<a href="Notesafterpaidt.php">Notes(paid)A</a>';
+							}
 						}
 						else{
 							echo '<a href="notes.php">Notes</a>';
@@ -84,6 +87,9 @@ $c=$_SESSION["c"];
 				}
 				else if ($y=="1"){
 					echo '<a href="profile.php">Student</a>';
+				}
+				else if ($y=="3"){
+					echo '<a href="aprofile.php">Admin</a>';
 				}
 				else{
 					echo '';

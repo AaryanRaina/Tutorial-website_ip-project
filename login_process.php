@@ -70,7 +70,15 @@ if ($user_email && $user_password) {
                 $_SESSION["n"]="no"; 
             }
         }
-
+        else if ($user_type==3){
+            header("Location: aprofile.php?q=success");
+            $z=success;
+            $_SESSION["z"]=$z;
+            $_SESSION["y"]="3";
+            $_SESSION["c"]=$user_class;
+            $_SESSION["ut"]=$user_type;
+            $_SESSION["n"]="yes";
+        }
         //header("Location: Success.php?q=success");
         echo "<h1>Logged In Successfully </h1>";
         $con = mysqli_connect('localhost','root');

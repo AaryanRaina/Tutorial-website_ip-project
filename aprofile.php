@@ -16,7 +16,10 @@ $user_e = $row['email'];
 $user_n = $row['username'];
 $user_c = $row['class'];
 $user_p = $row['phoneno'];
+$user_a = $row['address'];
 //echo $user_e;
+//echo '<script type="text/javascript">'
+//window.onload = function () { alert("Welcome at c-sharpcorner.com."); }
 ?>
 <!DOCTYPE html> 
 <html lang="en">
@@ -30,6 +33,11 @@ $user_p = $row['phoneno'];
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src="javascript/js.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>$('#rsubmit').click( function() { 
+	  alert('User Entry Registered Successfully'); 
+	  });
+</script>-->
 
 <script> 
 			function register() { 
@@ -136,7 +144,7 @@ $user_p = $row['phoneno'];
     <tr>
     <td data-label="Email-id"><?php echo $user_e ?></td>  
 	<td data-label="Phone No."><?php echo $user_p ?></td>
-    <td data-label="Address"><?php echo $user_c ?></td>
+    <td data-label="Address"><?php echo $user_a ?></td>
 
 	  
  </tr>
@@ -147,7 +155,7 @@ $user_p = $row['phoneno'];
 <br>
 	<div id="formstyle">
 		<h1 style="text-align: center;">Add Teachers/Admins</h1> 
-		<form id="rform" name="RegForm" action="register_process.php"
+		<form id="rform" name="RegForm" action="register_process_admin.php"
 			onsubmit="return register()" method="post"> 
 			<p>Name: <input type="text"
 							size="65" name="Name" /></p> 
@@ -202,7 +210,7 @@ $user_p = $row['phoneno'];
 			
 			
 			<p id="fbuttons"> 
-				<input id="rsubmit" type="submit"
+				<input onclick = "alert('user entry registered')" id="rsubmit" type="submit"
 					value="Submit" name="Submit" /> 
 				<input id="rreset" type="reset"
 					value="Reset" name="Reset" /> 
@@ -225,6 +233,7 @@ $user_p = $row['phoneno'];
   } else {
     x.className = "topnav";
   }
+  
 </script>
 
 <div id="fix"></div>
