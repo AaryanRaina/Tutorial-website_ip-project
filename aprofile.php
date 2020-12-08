@@ -48,8 +48,10 @@ $user_p = $row['phoneno'];
 				
 				var address = 
 					document.forms["RegForm"]["Address"]; 
-					
-					
+				var Class = 
+					document.forms["RegForm"]["class"]; 					
+				var school = 
+					document.forms["RegForm"]["school"]; 					
 
 				if (name.value == "") { 
 					window.alert("Please enter your name."); 
@@ -89,6 +91,19 @@ $user_p = $row['phoneno'];
 					return false; 
 				} 
 				
+				if (Class.value == "") { 
+					window.alert( 
+					"Please enter your Class name"); 
+					Class.focus(); 
+					return false; 
+				} 				
+
+				if (school.value == "") { 
+					window.alert( 
+					"Please enter your school's name"); 
+					school.focus(); 
+					return false; 
+				} 
 
 				if (password.value != cpassword.value) { 
 				   alert("Your password and confirmation password do not match. Try again!");
@@ -153,6 +168,14 @@ $user_p = $row['phoneno'];
 			<br /> 
 			<p>Phone No: <input type="text"
 						size="65" name="Telephone" /></p> 
+
+			<br /> 
+			<p>Class: <input type="text"
+						size="65" name="class" /></p> 
+
+			<br /> 
+			<p>School: <input type="text"
+						size="65" name="school" /></p> 						
 			
 			<br /> 			
 			<p> Select User's Type:
