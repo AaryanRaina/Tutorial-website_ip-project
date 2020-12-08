@@ -142,14 +142,15 @@
 			<p class="post-info">Submit this form :</p> 
 			<div class="container-of">
 				<form action="student_info_classroom_batches.php" method="post">
-				  <label id="of_form" for="fname">Name</label>
+				  <label id="name" for="fname">Name</label>
 				  <input type="text" id="fname" name="sname" placeholder="Your name.." required>
 			  
-				  <label id="of_form" for="lname">E-Mail</label>
+				  <label id="mail" for="lname">E-Mail</label>
 				  <input type="email" id="lname" name="email" style="color:gray;" placeholder="Your e-mail.." required>
 			  
-				  <label id="of_form" for="country">Class</label>
-				  <select id="country" name="class">
+				  <label  for="country">Class</label>
+				  <select id="country" required name="class">
+					<option value="" selected disabled>Choose...</option>
 					<option value="9th CBSE">9th CBSE</option>
 					<option value="9th State Board">9th State Board</option>
 					<option value="10th CBSE">10th CBSE</option>
@@ -157,9 +158,9 @@
 				  </select>
 			  
 				  <label id="of_form" for="subject">Query</label>
-				  <textarea id="subject" name="query" placeholder="Write something.." style="height:200px"></textarea>
+				  <textarea id="subject" name="query" placeholder="Write something.." required style="height:200px"></textarea>
 			  
-				  <input type="submit" value="Submit">
+				  <input type="submit" value="Submit" id="Submit">
 			  
 				</form>
 			  </div>
@@ -232,6 +233,22 @@
 
 		</footer>
 	</footer>
+	
+
+<script>
+
+				document.getElementById("Submit").onclick=function(){
+					var name=document.getElementById("name").value;
+					var email=document.getElementById("mail").value;
+					var Class=document.getElementById("country").value;
+					var query=document.getElementById("subject").value;
+					
+					if((name!=="") && (email!=="") && (Class!=="") && (query!=="") ){
+					alert('You have been registered for classroom batches!');
+				}
+				}
+
+</script>		
 
 </body>
 

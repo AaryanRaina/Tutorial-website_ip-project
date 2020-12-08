@@ -44,22 +44,23 @@ $user_e = $row['email'];
 
 			<form id="form_id" method="post" name="myform" action="login_process.php">
 				<strong>Email :</strong></br>
-				<input type="text" name="username" id="username" /></br>
+				<input type="email" name="username" id="username" required /></br>
 
 				<strong>Password :</strong></br>
-				<input type="password" name="password" id="password" /></br>
+				<input type="password" name="password" id="password" required /></br>
 
 				<!-- <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> -->
 				<!-- <label for="vehicle1"> Remember me</label><br> -->
 				<br>
-
+				
 				<a href="https://www.w3schools.com/">Forgot Password?</a>
 				<br>
 				<br>
 
-				<input type="submit" name="login" value="Login" id="submit" />
+				<input type="submit" name="login" value="Login" id="Submit" />
 			</form>
 			<br>
+			
 			<span><b class="note">Note : </b>If not registered yet, Register here.<br /><b class="valid"></span>
 
 			<input type="submit" value="Register" id="submit" onclick="location.href='register.php'"/>
@@ -111,6 +112,18 @@ $user_e = $row['email'];
 	<script type="text/javascript">
 		document.title = "Login";
 	</script>
+<script>
+
+				document.getElementById("Submit").onclick=function(){
+				var email=document.getElementById("username").value;
+				var password=document.getElementById("password").value;
+					
+					if((password!=="") && (email!=="") ){
+					alert('You have been logged in successfully!');
+				}
+				}
+
+</script>	
 </body>
 
 </html>

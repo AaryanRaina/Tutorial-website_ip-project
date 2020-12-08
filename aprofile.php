@@ -33,11 +33,9 @@ $user_a = $row['address'];
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src="javascript/js.js"></script>
-<!--<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<script>$('#rsubmit').click( function() { 
-	  alert('User Entry Registered Successfully'); 
-	  });
-</script>-->
+<script src="javascript/validatename.js"></script>
+
+
 
 <script> 
 			function register() { 
@@ -123,6 +121,7 @@ $user_a = $row['address'];
 			} 
 		</script> 
 
+
 </head>
 <body class="body">
 <?php
@@ -154,41 +153,41 @@ $user_a = $row['address'];
 <br>
 <br>
 	<div id="formstyle">
-		<h1 style="text-align: center;">Add Teachers/Admins</h1> 
+		<h1 style="text-align: center;">ADD USERS</h1> 
 		<form id="rform" name="RegForm" action="register_process_admin.php"
 			onsubmit="return register()" method="post"> 
-			<p>Name: <input type="text"
+			<p>Name: <input id="name" type="text"
 							size="65" name="Name" /></p> 
 			<br /> 
-			<p>Address: <input type="text"
+			<p>Address: <input id="address" type="text"
 							size="65" name="Address" /> 
 		</p> 
 			<br /> 
-			<p>E-mail Address: <input type="email"
+			<p>E-mail Address: <input id="mail" type="email"
 							size="65" name="EMail" /></p> 
 			<br /> 
-			<p>Password: <input type="text"
+			<p>Password: <input id="newp" type="text"
 						size="65" name="Password" /></p>
 			<br>
-			<p>Confirm Password: <input type="text"
+			<p>Confirm Password: <input id="confirmp" type="text"
 						size="65" name="CPassword" /></p> 
 						
 			<br /> 
-			<p>Phone No: <input type="text"
+			<p>Phone No: <input id="phone" type="text"
 						size="65" name="Telephone" /></p> 
 
 			<br /> 
-			<p>Class: <input type="text"
+			<p>Class: <input id="hello1" type="text"
 						size="65" name="class" /></p> 
 
 			<br /> 
-			<p>School: <input type="text"
+			<p>School: <input id="hello2" type="text"
 						size="65" name="school" /></p> 						
 			
 			<br /> 			
 			<p> Select User's Type:
 
-			<select name="user_type"  required >
+			<select id="utype" name="user_type"  required >
 			  <option value="" disabled selected>Choose...</option>
 			  <option value="1">1</option>
 			  <option value="2">2</option>
@@ -198,7 +197,7 @@ $user_a = $row['address'];
 			
 			<p> Payment:
 
-			<select name="payement"  required >
+			<select name="payement" id="payment" required >
 			  <option value="" disabled selected>Choose...</option>
 			  <option value="yes">yes</option>
 			  <option value="no">no</option>
@@ -210,7 +209,7 @@ $user_a = $row['address'];
 			
 			
 			<p id="fbuttons"> 
-				<input onclick = "alert('user entry registered')" id="rsubmit" type="submit"
+				<input  id="rsubmit" type="submit"
 					value="Submit" name="Submit" /> 
 				<input id="rreset" type="reset"
 					value="Reset" name="Reset" /> 
@@ -267,6 +266,32 @@ $user_a = $row['address'];
 </footer>
 <script type="text/javascript">
 	document.title="Admin's Profile";
+
+</script>	
+	
+<script type="text/javascript">
+
+		document.getElementById("rsubmit").onclick=function(){
+			var name=document.getElementById("name").value;
+			var address=document.getElementById("address").value;
+			var email=document.getElementById("mail").value;
+			
+			var newp=document.getElementById("newp").value;
+			var confirmp=document.getElementById("confirmp").value;
+			var phone=document.getElementById("phone").value;
+			
+			var Class=document.getElementById("hello1").value;
+			var school=document.getElementById("hello2").value;
+			var utype=document.getElementById("utype").value;
+			
+			var payment=document.getElementById("payment").value;
+
+			if((name!=="") && (address!=="") && (email!=="") && (newp!=="") && (confirmp!=="") && (phone!=="") && (Class!=="") && (school!=="") && (utype!=="") && (payment!=="") && (newp==confirmp)){
+			alert('The User has been registered successfully');
+		}
+		}
+
+
 </script>
 </body>
 </html>

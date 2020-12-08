@@ -39,9 +39,9 @@ Facebook : https://www.facebook.com/aaryan.raina.7<br>
 <center>
 <!-- <input id="numb" class="cform" placeholder="Full Name" type="text"> -->
 <form action="contact_us.php" method="post">
-	<input placeholder="email" type="email" required name="email">
+	<input id="mail" placeholder="email" type="email" required name="email">
 	<textarea id="msg" rows="4" cols="20" required name="message"> Message... </textarea>
-	<button type="submit" class="btn-outline-reg" style="cursor: pointer;" value="submit" onclick="myFunction()">Submit</button>
+	<button id="Submit" type="submit" class="btn-outline-reg" style="cursor: pointer;" value="submit" >Submit</button>
 </form>
 
 
@@ -105,6 +105,21 @@ function myFunction() {
   }
 }
 </script>
+
+<script>
+
+				document.getElementById("Submit").onclick=function(){
+				var email=document.getElementById("mail").value;
+				var msg=document.getElementById("msg").value;
+					
+					if((msg!=="") && (email!=="") ){
+					alert('Your queries have been sent. Please wait for the reply');
+				}
+				}
+
+</script>		
+
+
 </body>
 
 </html>

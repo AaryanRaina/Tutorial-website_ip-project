@@ -138,11 +138,11 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="form-group checkbox">
-                                        <input type="checkbox" id="pterms" value="Agreed-to-Terms" required>I have read and agree to the <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
+                                        <input type="checkbox" id="pterms" value="Agreed-to-Terms" required>I have read and agree to the <a href="privacy policy.php">Privacy Policy</a> and <a href="Terms&condition.php">Terms Conditions</a>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="form-control-submit-button">SUBMIT</button>
+                                        <button type="submit" id="Submit" class="form-control-submit-button">SUBMIT</button>
                                     </div>
                                     <div class="form-message">
                                         <div id="pmsgSubmit" class="h3 text-center hidden"></div>
@@ -198,6 +198,22 @@
 
 		</footer>
 </footer>
+
+
+<script>
+
+				document.getElementById("Submit").onclick=function(){
+					var name=document.getElementById("pname").value;
+					var email=document.getElementById("pemail").value;
+					var data=document.getElementById("pselect").value;
+					
+					if((name!=="") && (email!=="") && (data!=="") ){
+					alert('Your data inquiry request has been registered');
+				}
+				}
+
+</script>		
+
 
 </body>
 </html>
