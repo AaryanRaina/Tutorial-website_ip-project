@@ -115,39 +115,39 @@
 		<h1 style="text-align: center;">REGISTRATION FORM</h1> 
 		<form id="rform" name="RegForm" action="register_process.php"
 			onsubmit="return register()" method="post"> 
-			<p>Name: <input id="name" type="text"
+			<p>Name: <input type="text"
 							size="65" name="Name" /></p> 
 			<br /> 
-			<p>Address: <input id="address" type="text"
+			<p>Address: <input type="text"
 							size="65" name="Address" /> 
 		</p> 
 			<br /> 
-			<p>E-mail Address: <input  id="mail" type="email"
+			<p>E-mail Address: <input type="email"
 							size="65" name="EMail" /></p> 
 			<br /> 
-			<p>Password: <input type="text" id="newp"
+			<p>Password: <input type="text"
 						size="65" name="Password" /></p>
 			<br>
-			<p>Confirm Password: <input type="text" id="confirmp"
+			<p>Confirm Password: <input type="text"
 						size="65" name="CPassword" /></p> 
 						
 			<br /> 
-			<p>Phone No: <input type="text" id="phone"
+			<p>Phone No: <input type="text"
 						size="65" name="Telephone" /></p> 
 						
 			<br /> 
-			<p>Class: <input type="text" id="hello1"
+			<p>Class: <input type="text"
 						size="65" name="hello"  /></p> 
 						
 			<br /> 
-			<p>School: <input type="text" id="hello2"
+			<p>School: <input type="text"
 						size="65" name="hello2" /></p> 
 			
 			<br>
 			
 			
-			<p>Queries: <textarea cols="55" id="utype"
-							name="Comment" required > </textarea></p> 
+			<p>Queries: <textarea cols="55"
+							name="Comment"> </textarea></p> 
 			<p id="fbuttons"> 
 				<input id="rsubmit" type="submit"
 					value="Submit" name="Submit" /> 
@@ -193,30 +193,6 @@
 
 		</footer>
 </footer>
-
-<script type="text/javascript">
-
-		document.getElementById("rsubmit").onclick=function(){
-			var name=document.getElementById("name").value;
-			var address=document.getElementById("address").value;
-			var email=document.getElementById("mail").value;
-			
-			var newp=document.getElementById("newp").value;
-			var confirmp=document.getElementById("confirmp").value;
-			var phone=document.getElementById("phone").value;
-			
-			var Class=document.getElementById("hello1").value;
-			var school=document.getElementById("hello2").value;
-			var queries=document.getElementById("utype").value;
-			
-
-			if((name!=="") && (address!=="") && (email!=="") && (newp!=="") && (confirmp!=="") && (phone!=="") && (Class!=="") && (school!=="") && (queries!=="") && (newp==confirmp)){
-			alert('You have been registered successfully');
-		}
-		}
-
-
-</script>
 
 </body>
 
