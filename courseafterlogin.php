@@ -17,21 +17,21 @@
 		<br>
 <h1>9th State Board Class</h1>
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/english.png"" alt="CCT101" width="370" height="200">
   </a>
   <div class="desc">English</div>
 </div>
 
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/3638977.jpg"" alt="Html" width="300" height="200">
   </a>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/MATHEMATICS.PNG"" alt="Database" width="300" height="200">
   </a>
   <div class="desc">Maths</div>
@@ -42,7 +42,7 @@
 <hr>
 <h1>9th CBSE class</h1>
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/english.png" alt="CCT101" width="300" height="200">
   </a>
   <div class="desc">English</div>
@@ -50,14 +50,14 @@
 
 
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/3638977.jpg"" alt="Html" width="300" height="200">
   </a>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/MATHEMATICS.PNG"" alt="Database" width="300" height="200">
   </a>
   <div class="desc">Maths</div>
@@ -68,7 +68,7 @@
 <hr>
 <h1>10th State Board Class</h1>
 <div class="gallery">
-  <a   href="images/engL.png">
+  <a target="_blank" href="images/engL.png">
     <img src="images/english.png" alt="CCT101" width="300" height="200">
   </a>
   <div class="desc">English</div>
@@ -76,14 +76,14 @@
 
 
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/3638977.jpg"" alt="Html" width="300" height="200">
   </a>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/MATHEMATICS.PNG"" alt="Database" width="300" height="200">
   </a>
   <div class="desc">Maths</div>
@@ -95,7 +95,7 @@
 
 <h1>10th State Board Class</h1>
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/english.png" alt="CCT101" width="300" height="200">
   </a>
   <div class="desc">English</div>
@@ -103,14 +103,14 @@
 
 
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/3638977.jpg"" alt="Html" width="300" height="200">
   </a>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
-  <a   href="#">
+  <a href = "videos.php">
     <img src="images/MATHEMATICS.PNG"" alt="Database" width="300" height="200">
   </a>
   <div class="desc">Maths</div>

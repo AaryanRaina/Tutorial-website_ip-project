@@ -36,7 +36,7 @@
 
 		<div class="iambrpslides fade">
 			<div class="numbertext">Subjects Offered : English</div>
-			<img src="./images/c.png">
+			<img src="./images/english_home.png" style = "display: block; margin-left: auto; margin-right: auto; width: 50%;">
 		</div>
 
 	</div>

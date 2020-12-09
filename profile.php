@@ -94,14 +94,14 @@ $payment = $row['payement'];
 </div>
 
 <div class="gallery">
-  <a href="#">
+  <a href="videos.php">
     <img src="images/3638977.jpg" alt="Html" width="300" height="200">
   </a>
   <div class="desc"> Science </div>
 </div>
 
 <div class="gallery">
-  <a href="#">
+  <a href="videos.php">
     <img src="images/english.png" alt="Database" width="300" height="200">
   </a>
   <div class="desc">English</div>

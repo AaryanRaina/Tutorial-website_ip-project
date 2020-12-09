@@ -1,6 +1,13 @@
 <?php
 session_start();
-$z=$_SESSION["z"];
+//include('login_process.php');
+if(isset($_SESSION['z'])){
+	$z=$_SESSION["z"];
+}
+else{
+	$z="";
+}
+//$z=$_SESSION["z"];
 $y=$_SESSION["y"];
 $n=$_SESSION["n"];
 $ut=$_SESSION["ut"];
@@ -40,7 +47,7 @@ $c=$_SESSION["c"];
 					</button>
 					<div class="dropdown-content">
 						<?php
-						if ($n=="yes"){
+						if ($z=="success" and $n=="yes"){
 							//$login = logout_process.php;
 							if ($ut=="2"){
 							echo '<a href="Notesafterpaidt.php">Notes(paid)T</a>';
@@ -60,15 +67,26 @@ $c=$_SESSION["c"];
 								echo '<a href="Notesafterpaidt.php">Notes(paid)A</a>';
 							}
 						}
-						else{
+						else if($z=="success" and $n!="yes"){
 							echo '<a href="notes.php">Notes</a>';
+						}
+						else{
+							echo '<a href="login.php">Notes</a>';
 						}
 						?>
 						<a href="referencebook.php">Reference Books</a>
 						<a href="Qpaper.php">Sample Ques. Papers</a>
 					</div>
 				</div>
-				<a href="course.php">Courses</a>
+				<?php
+				 if ($z=="success"){
+					echo '<a href="courseafterlogin.php">Courses</a>';
+				 }
+				 else{
+					echo '<a href="course.php">Courses</a>';
+				 }
+				?>
+				<!--<a href="course.php">Courses</a>-->
 				<a href="contact.php">Contact</a>
 				<a href="Gallery.php">Gallery</a>
 				<?php

@@ -15,6 +15,9 @@ $row=mysqli_fetch_array($result);
 $user_e = $row['email'];
 //echo $user_e;
 ?>
+<?php
+	//include('login_process.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -117,9 +120,13 @@ $user_e = $row['email'];
 				document.getElementById("Submit").onclick=function(){
 				var email=document.getElementById("username").value;
 				var password=document.getElementById("password").value;
-					
-					if((password!=="") && (email!=="") ){
+					//console.log($user_password);
+					//console.log($user_email);
+					if((password==$user_password) && (email==$user_email) ){
 					alert('You have been logged in successfully!');
+				}
+				else{
+					alert('hello!');
 				}
 				}
 

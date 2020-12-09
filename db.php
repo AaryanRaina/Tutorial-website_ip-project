@@ -8,5 +8,5 @@ if (!$connection) {
 }
 else
 {
-	echo "connected";
+	//echo "connected";
 }
