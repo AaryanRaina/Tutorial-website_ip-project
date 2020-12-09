@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Search Informatics</title>
+  <title>Search</title>
   <style type="text/css">
     body{
       width: 70%;
@@ -73,18 +73,21 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
 <ul id="myUL">
-  <li><a href="#" class="header">A</a></li>
-  <li><a href="download.php">Download</a></li>
-  <li><a href="course.php">Course</a></li>
-
-  <li><a href="#" class="header">B</a></li>
-  <li><a href="#">Informatics</a></li>
+  <li><a href="#" class="header">Section I</a></li>
   <li><a href="index.php">Home</a></li>
+  <li><a href="register.php">Register</a></li>
 
-  <li><a href="#" class="header">C</a></li>
-  <li><a href="login.php">Login</a></li>
-  <li><a href="#">Matepani</a></li>
-  <li><a href="#">Pokhara</a></li>
+ 
+  <li><a href="#" class="header">Section II</a></li>
+  <li><a href="course.php">Course</a></li>
+  <li><a href="JobOppurtunities.php">Job Opportunities</a></li>
+
+  <li><a href="#" class="header">Section III</a></li>
+  <li><a href="contact.php">Contact Us</a></li>
+  <li><a href="Terms&condition.php">T & C</a></li>
+  <li><a href="privacy policy.php">Privacy Policy</a></li>
+  <li><a href="Gallery.php">Gallery</a></li>
+
 </ul>
 </body>
 </html>
