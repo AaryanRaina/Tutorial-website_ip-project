@@ -77,7 +77,7 @@
 	<body> 
 	<div id="formstyle">
 		<h1 style="text-align: center;"> Change Password</h1> 
-		<form id="rform" name="RegForm" action="register_process.php"
+		<form id="rform" name="RegForm" action="changepassword_process.php"
 			onsubmit="return register()" method="post"> 
 			
 			<p>E-mail Address: <input id="mail" type="email"

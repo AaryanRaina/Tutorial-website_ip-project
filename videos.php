@@ -122,7 +122,7 @@
 </article> -->
 <article class="middleContent">
 <?php
-	$conn = new mysqli("localhost","root",);
+	$conn = new mysqli("localhost","root","");
 	mysqli_select_db($conn,'venjantut');
 	if($conn->connect_error){
 		die("Connection Failed!".$conn->connect_error);

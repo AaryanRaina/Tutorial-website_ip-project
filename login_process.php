@@ -95,8 +95,10 @@ if ($user_email && $user_password) {
                 values('$user_email','$user_password')";
         mysqli_query($con, $sql);
     } else {
-        //header("Location: login.php?q=error");
-        die("Invalid Password!");
-        //header();
+        echo '<script>alert("Invalid Login"); window.location = "login.php;"</script>'; 
+        //die("Invalid Password!");
+        echo 'hemkesh';
+        //header("Location: login.php?q=success");
     }
 }
+//header("Location: login.php?q=success");

@@ -62,7 +62,7 @@ $user_p = $row['phoneno'];
 
 <a href="addnotes.php"><input  class="pbtn" type="button" style="width:200px;" value="Add Subject Notes"></a>
                                                       
-<a href="videos.php"><input class="pbtn" type="button" style="width:200px;" value="Add Subject Videos"></a>
+<a href="addvideos.php"><input class="pbtn" type="button" style="width:200px;" value="Add Subject Videos"></a>
 
 <br>
 <br>

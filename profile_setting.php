@@ -1,3 +1,31 @@
+<?php
+$con = mysqli_connect('localhost','root');
+
+if($con){
+	//echo "Connection successfull";
+}else{
+	echo "No connection";
+}
+
+mysqli_select_db($con, 'venjantut');
+
+$result=mysqli_query($con,"SELECT * from register where email in (select email from login)");
+
+$row=mysqli_fetch_array($result);
+$user_e = $row['email'];
+$user_n = $row['username'];
+$user_class = $row['class'];
+$user_school= $row['school'];
+$user_type = $row['user_type'];
+$payment = $row['payement'];
+$phone = $row['phoneno'];
+
+$result1=mysqli_query($con,"SELECT * from response where PHONENO = ".$phone."");
+$row=mysqli_fetch_array($result1);
+$txid = $row['TXNID'];
+$amount = $row['TXNAMOUNT'];
+//echo $user_e;
+?>
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -30,17 +58,17 @@
   </thead>
   <tbody>
     <tr>
-	  <td data-label="Name">Rahul Subramanium</td>
-      <td data-label="Email-id">rahuls123@gmail.com</td>
-      <td data-label="Mobile">9876543211</td>
-      <td data-label="Class">10th</td>
-	  <td data-label="School">DAV Public School</td>
+	  <td data-label="Name"><?php echo $user_n ?></td>
+      <td data-label="Email-id"><?php echo $user_e ?></td>
+      <td data-label="Mobile"><?php echo $phone ?></td>
+      <td data-label="Class"><?php echo $user_class ?></td>
+	  <td data-label="School"><?php echo $user_school ?></td>
  </tr>
   </tbody>
 </table>
 <br>
 <br>
-<input type="button" style="width:150px;float:right; !important;" value="Change Password">
+<a href= "changepassword.php"><input type="button" style="width:190px;float:right; !important;" value="Change Password"></a>
 
 <br>
 <br>
@@ -54,8 +82,16 @@
 	</thead>
 	<tbody>
 	  <tr>
-		<td data-label="Study Material">yes</td>
-		<td data-label="Live Session">yes</td>
+	  <?php
+						if ($payment=="yes"){
+							echo '<td data-label="Study Material">yes</td>';
+							echo '<td data-label="Live Session">yes</td>';
+							}
+						else{
+							echo '<td data-label="Study Material">no</td>';
+							echo '<td data-label="Live Session">no</td>';
+						}
+	?>
    </tr>
 	</tbody>
 </table>
@@ -64,12 +100,14 @@
 	<caption>Previous Transactions</caption>
 	<thead>
 	  <tr>
-		<th scope="col">Study-Material</th>
+		<th scope="col">Transaction ID</th>
+		<th scope="col">Transaction Amount</th>
 	  </tr>
 	</thead>
 	<tbody>
 	  <tr>
-		<td data-label="Study Material">Rs 999 </td>
+		<td data-label="Transaction ID"><?php echo $txid ?></td>
+		<td data-label="Transaction Amount"><?php echo $amount ?></td>
    </tr>
 	</tbody>
 </table>

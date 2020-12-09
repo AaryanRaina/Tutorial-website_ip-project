@@ -49,7 +49,7 @@ if (isset($_POST['Submit'])) {
 
     if (mysqli_num_rows($result) == 0) {
 
-        $query = "insert into register (username,address,email,password,phoneno,class,school,queries)
+        $query = "insert into register (username,user_type,address,email,password,phoneno,class,school,queries)
 		VALUES('$name',1,'$address','$email','$password',$telephone,'$class','$school','$queries')";
         echo $query;
 

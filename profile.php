@@ -16,6 +16,8 @@ $user_e = $row['email'];
 $user_n = $row['username'];
 $user_class = $row['class'];
 $user_school= $row['school'];
+$user_type = $row['user_type'];
+$payment = $row['payement'];
 //echo $user_e;
 ?>
 <!DOCTYPE html> 
@@ -58,10 +60,28 @@ $user_school= $row['school'];
   </tbody>
 </table>
 <br>
-
-<input  class="pbtn" type="button" style="width:150px;" value="Subject Notes">
-                                                      
-<a href="videos.php"><input class="pbtn" type="button" style="width:150px;" value="Subject Videos"></a>
+<?php
+						if ($payment=="yes"){
+							//$login = logout_process.php;
+						 if($user_type=="1"){
+								if($user_class=="9"){
+									echo '<a href="Notesafterpaid9.php"><input class="pbtn" type="button" style="width:150px;" value="Subject Notes"></a>';
+								}
+								else if($user_class=="10"){
+									echo '<a href="Notesafterpaid10.php"><input class="pbtn" type="button" style="width:150px;" value="Subject Notes"></a>';
+								}
+								else{
+									echo '<a href="notes.php">Notes</a>';
+								}
+							}
+						}
+						else{
+							echo '<a href="notes.php"><input class="pbtn" type="button" style="width:150px;" value="Subject Notes"></a>';
+						}
+?>
+<!--<input  class="pbtn" type="button" style="width:150px;" value="Subject Notes">-->
+                  
+<a href="profile_setting.php"><input class="pbtn" type="button" style="width:150px;" value="Edit Profile"></a>
 
 <br>
 <br>
