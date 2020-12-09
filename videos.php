@@ -8,21 +8,33 @@
  <meta name="author" content="Venjan Kumar Raina">
  <link rel="stylesheet" type="text/css" href="css/style.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<style>
+#topic{
+		margin-top:60px;!important
+}
+#heading{
+	text-align:center;
+	margin-top:100px;
+}
+</style>
 <script src="javascript/js.js"></script>
+
+
 
 </head>
 <body class="body">
-    <?php
-		require_once('nav.php');
-	?>
-<h1>Subject Videos</h1>
 
-<article class="middleContent">
+<?php
+		require_once('nav.php');
+?>
+
+<h1 id="heading">SUBJECT VIDEOS</h1>
+
+<!-- <article class="middleContent">
 	<footer>
 		<p class="post-info">Lecture 1 : Trignometry</p>
 		<div class="container_You">
-			<iframe allowFullScreen='allowFullScreen' class="responsive-iframe" src="https://www.youtube.com/embed/Q00SzWIJT1Y?controls=0"></iframe>
+			<iframe class="responsive-iframe" src="https://www.youtube.com/embed/Q00SzWIJT1Y?controls=0"></iframe>
 		  </div>
 	</footer>
 	<content>
@@ -107,6 +119,35 @@
 		
 
 	</content>
+</article> -->
+<article class="middleContent">
+<?php
+	$conn = new mysqli("localhost","root",);
+	mysqli_select_db($conn,'venjantut');
+	if($conn->connect_error){
+		die("Connection Failed!".$conn->connect_error);
+	}
+			$stmt = $conn->prepare('SELECT * FROM addvideos');
+  			$stmt->execute();
+  			$result = $stmt->get_result();
+  			while ($row = $result->fetch_assoc()):
+
+?>
+
+	<footer>
+	<br>
+		<p class="post-info" id="topic"><?= $row['topic'] ?></p>
+		<div class="container_You">
+			<iframe class="responsive-iframe" src="<?= $row['video'] ?>"></iframe>
+		  </div>
+		  
+	</footer>
+	<content>
+		
+
+	</content>
+  <?php endwhile; ?>
+
 </article>
 
 
