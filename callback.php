@@ -70,7 +70,7 @@ if($isValidChecksum == "TRUE") {
                           VALUES ('".$_POST['ORDERID']."','".$_POST['MID']."', '".$_POST['TXNID']."','".$_POST['TXNAMOUNT']."','".$_POST['PAYMENTMODE']."','".$_POST['CURRENCY']."','".$_POST['TXNDATE']."','".$_POST['STATUS']."','".$_POST['RESPCODE']."','".$_POST['RESPMSG']."','".$_POST['GATEWAYNAME']."','".$_POST['BANKTXNID']."','".$_POST['BANKNAME']."','".$_POST['CHECKSUMHASH']."')";
                           
                           if ($conn->query($sql) === TRUE) {
-                          echo "New record created successfully";
+                          //echo "New record created successfully";
                           } else {
                           echo "Error: " . $sql . "<br>" . $conn->error;
                           }
@@ -85,7 +85,7 @@ if($isValidChecksum == "TRUE") {
                           $sql = "UPDATE register SET	payement	= 'yes' WHERE phoneno = ".$_POST['ORDERID']."";
                           
                           if ($conn->query($sql) === TRUE) {
-                          echo "New record created successfully";
+                          //echo "New record created successfully";
                           } else {
                           echo "Error: " . $sql . "<br>" . $conn->error;
                           }
@@ -94,8 +94,8 @@ if($isValidChecksum == "TRUE") {
                      }
                      session_start();
                      $_SESSION["n"]="yes";
-                     $y=$_SESSION["y"];
-                     $z=$_SESSION["z"];
+                     //$y=$_SESSION["y"];
+                     //$z=$_SESSION["z"];
 
 
 ?>

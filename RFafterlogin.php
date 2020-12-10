@@ -53,14 +53,14 @@
 
 <div class="gallery">
   <a  href="https://drive.google.com/file/d/1zvUwOBj1wKbBFMBRsVQITldit0CaG0tN/view?usp=sharing">
-    <img src="images/s.jpg"" alt="Html" width="300" height="200">
+    <img src="images/s.jpg" alt="Html" width="300" height="200">
   </a>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
   <a  href="https://drive.google.com/file/d/1zvUwOBj1wKbBFMBRsVQITldit0CaG0tN/view?usp=sharing">
-    <img src="images/m.jpeg"" alt="Database" width="300" height="200">
+    <img src="images/m.jpeg" alt="Database" width="300" height="200">
   </a>
   <div class="desc">Mathematics</div>
 </div>
@@ -80,14 +80,14 @@
 
 <div class="gallery">
   <a  href="https://drive.google.com/file/d/1zvUwOBj1wKbBFMBRsVQITldit0CaG0tN/view?usp=sharing">
-    <img src="images/science9.PNG"" alt="Html" width="300" height="200">
+    <img src="images/science9.PNG" alt="Html" width="300" height="200">
   </a>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
   <a  href="https://drive.google.com/file/d/1zvUwOBj1wKbBFMBRsVQITldit0CaG0tN/view?usp=sharing">
-    <img src="images/math.PNG"" alt="Database" width="300" height="200">
+    <img src="images/math.PNG" alt="Database" width="300" height="200">
   </a>
   <div class="desc">Mathematics</div>
 </div>
@@ -108,14 +108,14 @@
 
 <div class="gallery">
   <a  href="https://drive.google.com/file/d/1zvUwOBj1wKbBFMBRsVQITldit0CaG0tN/view?usp=sharing">
-    <img src="images/91gcjeazhvL.jpg"" alt="Html" width="300" height="600">
+    <img src="images/91gcjeazhvL.jpg" alt="Html" width="300" height="600">
   </a>
   <div class="desc">Science</div>
 </div>
 
 <div class="gallery">
-  <a  href="images/Course/c.jpg">
-    <img src="https://drive.google.com/file/d/1zvUwOBj1wKbBFMBRsVQITldit0CaG0tN/view?usp=sharing"" alt="Database" width="300" height="200">
+  <a  href="https://drive.google.com/file/d/1zvUwOBj1wKbBFMBRsVQITldit0CaG0tN/view?usp=sharing">
+    <img src="images/mat.jpg" alt="Database" width="300" height="200">
   </a>
   <div class="desc">Mathematics</div>
 </div>

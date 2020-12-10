@@ -7,11 +7,35 @@ if(isset($_SESSION['z'])){
 else{
 	$z="";
 }
+if(isset($_SESSION['y'])){
+	$y=$_SESSION["y"];
+}
+else{
+	$y="";
+}
+if(isset($_SESSION['n'])){
+	$n=$_SESSION["n"];
+}
+else{
+	$n="";
+}
+if(isset($_SESSION['ut'])){
+	$ut=$_SESSION["ut"];
+}
+else{
+	$ut="";
+}
+if(isset($_SESSION['c'])){
+	$c=$_SESSION["c"];
+}
+else{
+	$c="";
+}
 //$z=$_SESSION["z"];
-$y=$_SESSION["y"];
-$n=$_SESSION["n"];
-$ut=$_SESSION["ut"];
-$c=$_SESSION["c"];
+//$y=$_SESSION["y"];
+//$n=$_SESSION["n"];
+//$ut=$_SESSION["ut"];
+//$c=$_SESSION["c"];
 //echo  $_SESSION["z"] ;
 ?>
 <header class="mainheader">
@@ -74,8 +98,22 @@ $c=$_SESSION["c"];
 							echo '<a href="login.php">Notes</a>';
 						}
 						?>
-						<a href="referencebook.php">Reference Books</a>
-						<a href="Qpaper.php">Sample Ques. Papers</a>
+						<?php
+						if ($z=="success"){
+							echo '<a href="RFafterlogin.php">Reference Books</a>';
+						}
+						else{
+							echo '<a href="referencebook.php">Reference Books</a>';
+						}
+						?>
+						<?php
+						if ($z=="success"){
+							echo '<a href="Qpaperafterlogin.php">Sample Ques. Papers</a>';
+						}
+						else{
+							echo '<a href="Qpaper.php">Sample Ques. Papers</a>';
+						}
+						?>
 					</div>
 				</div>
 				<?php
