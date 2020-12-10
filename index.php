@@ -36,7 +36,7 @@
 
 		<div class="iambrpslides fade">
 			<div class="numbertext">Subjects Offered : English</div>
-			<img src="./images/english_home.png" style = "display: block; margin-left: auto; margin-right: auto; width: 50%;">
+			<img src="./images/english_home1.svg" style = "display: block; margin-left: auto; margin-right: auto; width: 50%;">
 		</div>
 
 	</div>
@@ -142,13 +142,13 @@
 			<p class="post-info">Submit this form :</p> 
 			<div class="container-of">
 				<form action="student_info_classroom_batches.php" method="post">
-				  <label id="name" for="fname">Name</label>
+				  <label id="of_form" for="fname">Name</label>
 				  <input type="text" id="fname" name="sname" placeholder="Your name.." required>
 			  
-				  <label id="mail" for="lname">E-Mail</label>
+				  <label id="of_form" for="lname">E-Mail</label>
 				  <input type="email" id="lname" name="email" style="color:gray;" placeholder="Your e-mail.." required>
 			  
-				  <label  for="country">Class</label>
+				  <label  id="of_form" for="country">Class</label>
 				  <select id="country" required name="class">
 					<option value="" selected disabled>Choose...</option>
 					<option value="9th CBSE">9th CBSE</option>
@@ -180,7 +180,7 @@
 		<article>
 			<h3>Join us today!</h3>
 			<p>Embark on an exciting learning journey with Venjan Tutorials</p>
-			<button class="buttonR buttonR2" onclick="window.location.href='register.php';">Register Now</button>
+			<button class="buttonR2 buttonR" onclick="window.location.href='register.php';">REGISTER</button>
 		</article>
 	</aside>
 
@@ -193,7 +193,7 @@
 
 	<aside class="buttom-sidebar">
 		<article>
-			<h3>Classroom Batches</h3>
+			<h3>Class Room Batches</h3>
 			<p>I offer classroom Batches for the students living in jammu on a first come first serve basis and that too free of cost.</p>
 		</article>
 	</aside>
@@ -238,8 +238,8 @@
 <script>
 
 				document.getElementById("Submit").onclick=function(){
-					var name=document.getElementById("name").value;
-					var email=document.getElementById("mail").value;
+					var name=document.getElementById("fname").value;
+					var email=document.getElementById("lname").value;
 					var Class=document.getElementById("country").value;
 					var query=document.getElementById("subject").value;
 					

@@ -759,7 +759,7 @@ img{
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -771,6 +771,7 @@ img{
 }
 .buttonR2:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  
 }
 
 /* register yourself*/
@@ -1158,3 +1159,34 @@ table th {
 	}
 }
 /*.top-sidebar,.middle-sidebar,.buttom-sidebar,.Faculty-sidebar,.team-sidebar*/
+
+
+@media  screen and (max-width: 640px) {
+	.top-sidebar{
+		font-size:80%;
+	}
+	
+	.buttonR{
+		font-size:60%;
+		width:100%;
+	}
+	.middle-sidebar{
+		font-size:80%;
+	}
+	.buttom-sidebar{
+		font-size:75%;
+	}
+	
+	.Faculty-sidebar
+	{
+		
+		font-size:80%;
+	}
+	.team-sidebar{
+		font-size:75%;
+		
+		
+	}
+	
+	
+}
